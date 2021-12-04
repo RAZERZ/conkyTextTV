@@ -2,7 +2,7 @@ import base64
 # import numpy as np
 # from PIL import Image
 
-file = open("/home/razerz/Documents/i3/textTv/data.txt", "r")
+file = open("~/Documents/i3/conkyTextTV/data.txt", "r")
 data = file.read()
 file.close()
 
@@ -24,21 +24,6 @@ while (aposIndex != 3):
 base64msg = data[start+22:stop]
 decoded = base64.b64decode(base64msg)
 
-gif = open("/home/razerz/Documents/i3/textTv/100.png", "wb")
+gif = open("~/Documents/i3/conkyTextTV/100.png", "wb")
 gif.write(decoded)
 gif.close()
-
-# im = Image.open("100.png")
-# im = im.convert("RGBA")
-
-# data = np.array(im)
-
-# red,green,blue,alpha = data.T
-
-# blue_areas = (red==0) & (blue==255) & (green==0)
-# white_areas = (red == 255) & (blue == 255) & (green == 255)
-# data[..., :-1][blue_areas.T] = (0,0,0)
-# data[..., :-1][white_areas] = (255,0,255)
-
-# resultedImage = Image.fromarray(data)
-# resultedImage.show()
