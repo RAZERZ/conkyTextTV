@@ -1,6 +1,12 @@
 # conkyTextTV
 SVT TextTV for Conky by generating image
 
+# Requirements
+
+- python3
+- curl (can be subbed with wget)
+- imagemagick
+
 # Install
 
 - Clone repo in ~/Documents/i3
