@@ -1,8 +1,7 @@
 import base64
-# import numpy as np
-# from PIL import Image
+import sys
 
-file = open("~/Documents/i3/conkyTextTV/data.txt", "r")
+file = open(sys.path[0] + "/data.txt", "r")
 data = file.read()
 file.close()
 
@@ -24,6 +23,6 @@ while (aposIndex != 3):
 base64msg = data[start+22:stop]
 decoded = base64.b64decode(base64msg)
 
-gif = open("~/Documents/i3/conkyTextTV/100.png", "wb")
+gif = open(sys.path[0] + "/100.png", "wb")
 gif.write(decoded)
 gif.close()
